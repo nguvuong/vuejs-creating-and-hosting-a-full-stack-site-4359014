@@ -74,7 +74,7 @@ export default {
       const email = prompt("Please enter your email to sign in:");
       const auth = getAuth();
       const actionCodeSettings = {
-        url: `https://full-stack-vue-deployment-ijmw.onrender.com`,
+        url: `https://full-stack-vue-deployment-ijmw.onrender.com/products/${this.$route.params.productId}`,
         handleCodeInApp: true,
       };
       await sendSignInLinkToEmail(auth, email, actionCodeSettings);
